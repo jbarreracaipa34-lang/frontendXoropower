@@ -1,0 +1,26 @@
+# Build folders
+/build/
+/app/build/
+
+# Gradle
+.gradle/
+
+# Android
+**/build/
+.gradle/
+.idea/
+*.apk
+*.ap_
+
+# APKs
+*.apk
+*.ap_
+
+# Logs
+*.log
+
+# Archivos temporales
+*.tmp
+
+# Kotlin/Gradle caches
+*.iml

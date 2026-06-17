@@ -1,0 +1,28 @@
+package com.xoropower
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.ui.Modifier
+import com.xoropower.navigation.AppNavigation
+import com.xoropower.ui.theme.xoropowerTheme
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        com.xoropower.data.network.RetrofitClient.init(this)
+        setContent {
+            xoropowerTheme {
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
+                    AppNavigation()
+                }
+            }
+        }
+    }
+}
